@@ -1,0 +1,13 @@
+.root {
+  height: 30px;
+  background-color: beige;
+  overflow: hidden;
+  text-indent: 10px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  & + .root {
+    margin-top: 10px;
+  }
+}

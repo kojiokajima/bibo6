@@ -1,0 +1,11 @@
+@import "../../mixin.scss";
+
+.root {
+  // background-color: grey;
+  &.monoSelect {
+    width: 150px;
+  }
+
+  & .label {
+  }
+}

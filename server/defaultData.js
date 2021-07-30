@@ -1,0 +1,2 @@
+exports.defaultPlatForms = ["LinkedIn", "Indeed", "Wantedly", "Company Website"]
+exports.defaultSkills = ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Redux", "MySQL", "PostgreSQL", "MongoDB", "Node.js", "express", "python"]

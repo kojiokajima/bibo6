@@ -1,0 +1,24 @@
+$primaryDark: #465efc;
+$primaryMedium: #2c90de;
+$primaryLight: #50a3e4;
+
+$secondaryDark: #3e363f;
+$secondaryMedium: #666167;
+$secondaryLight: #968c97;
+
+$spMaxWidth: 600px;
+// $tabMinWidth: 960px;
+$tabMaxWidth: 960px;
+// $pcMinWidth: 1920px;
+
+@mixin sm($max: $spMaxWidth) {
+  @media only screen and (max-width: #{$min}) {
+    @content;
+  }
+}
+
+@mixin md($min: $tabMaxWidth) {
+  @media only screen and (max-width: #{$min}) {
+    @content;
+  }
+}

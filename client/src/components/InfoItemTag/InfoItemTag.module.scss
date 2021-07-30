@@ -1,0 +1,18 @@
+@import "../../mixin.scss";
+
+.root {
+  display: flex;
+  font-size: 2vw;
+
+  .tagItem {
+    padding: 0.5% 1%;
+    border: 1px solid $primaryMedium;
+
+    & + .tagItem {
+      margin-left: 2vw;
+    }
+
+    .tagLink {
+    }
+  }
+}

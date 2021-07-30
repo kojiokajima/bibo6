@@ -1,0 +1,39 @@
+@import "../../mixin.scss";
+
+.root {
+  margin: 0 1.7vw 1vw 0;
+  padding: 0.7% 1.2%;
+  position: relative;
+  border: 1px solid $primaryDark;
+
+  &.deleteSelected {
+    border: 1px solid #c74d2d;
+
+    &:after {
+      content: "";
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 2px solid #c74d2d;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: -26%;
+    right: -10%;
+    font-size: 100%;
+    color: #fff;
+    border-radius: 50%;
+    &.add {
+      background-color: $primaryLight;
+      border: 1px solid $primaryLight;
+    }
+    &.delete {
+      background-color: #c74d2d;
+      border: 1px solid #c74d2d;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../mixin.scss";
+
+.root {
+  height: 60px;
+  width: calc(100vw - 30px);
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primaryDark;
+
+  .left {
+    height: 40px;
+    width: 40px;
+    background-color: $secondaryLight;
+  }
+
+  .middle {
+    height: 25px;
+    width: 190px;
+    background-color: $secondaryLight;
+  }
+
+  .right {
+    color: #fff;
+  }
+}

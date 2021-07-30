@@ -1,0 +1,27 @@
+@import "../../mixin.scss";
+
+.root {
+  .fields {
+    .fieldLine {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & + .fieldLine {
+        margin-top: 1vw;
+      }
+
+      .field {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .deleteButton {
+      }
+    }
+  }
+
+  .addButton {
+  }
+}

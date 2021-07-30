@@ -1,0 +1,12 @@
+@import "../../mixin.scss";
+
+.root {
+  font-size: 2vw;
+  border: 1px solid $primaryDark;
+
+  .item {
+    & + .item {
+      margin-top: 2vh;
+    }
+  }
+}

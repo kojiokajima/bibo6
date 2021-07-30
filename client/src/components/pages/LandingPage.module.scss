@@ -1,0 +1,48 @@
+@import "../../mixin.scss";
+
+.root {
+  height: 100vh;
+  width: 100vw;
+  margin: 3vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo {
+    height: 200px;
+    width: 200px;
+    background-color: $secondaryLight;
+  }
+
+  .title {
+    margin-top: 4vw;
+    color: $primaryMedium;
+    font-size: 6vw;
+    letter-spacing: 3px;
+  }
+
+  .text {
+    margin-top: 1vw;
+    color: $primaryLight;
+    font-size: 3vw;
+  }
+
+  .buttonArea {
+    margin-top: 9vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $secondaryMedium;
+
+    .googleSignIn {
+      width: 100%;
+      padding: 6% 18%;
+      border: 1px solid $secondaryMedium;
+    }
+    .or {
+      margin: 1vw 0;
+    }
+    .buttonArea {
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../mixin.scss";
+
+.root {
+  display: flex;
+  align-items: center;
+  font-size: 4vw;
+
+  .name {
+    color: $primaryDark;
+  }
+
+  .option {
+    font-size: 2vw;
+    margin-left: 2vw;
+    padding: 0.5% 2%;
+    cursor: pointer;
+    &.edit {
+      color: $secondaryMedium;
+      border: 1px solid $secondaryMedium;
+    }
+
+    &.delete {
+      color: #c74d4d;
+      border: 1px solid #c74d4d;
+    }
+  }
+
+  .optionButton {
+    margin-left: 2vw;
+    color: $secondaryMedium;
+  }
+}

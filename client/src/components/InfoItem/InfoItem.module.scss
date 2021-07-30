@@ -1,0 +1,25 @@
+@import "../../mixin.scss";
+
+.root {
+  display: flex;
+  align-items: center;
+
+  .label {
+    width: 25%;
+    font-size: 1.1rem;
+    color: $secondaryMedium;
+  }
+
+  .content {
+    width: 80%;
+    color: $secondaryDark;
+  }
+
+  & + .root {
+    margin-top: 5vh;
+  }
+}
+
+.multiLine {
+  align-items: flex-start;
+}

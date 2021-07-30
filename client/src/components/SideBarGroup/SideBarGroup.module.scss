@@ -1,0 +1,11 @@
+.root {
+  .status {
+  }
+
+  .items {
+  }
+
+  & + .root {
+    margin-top: 3vh;
+  }
+}

@@ -1,0 +1,16 @@
+.root {
+  height: 100vh;
+  width: 200px;
+  // display: flex;
+  // flex-direction: column;
+  background-color: #f4f4f4;
+
+  .addCompany {
+    margin: 2vw 0;
+    text-align: center;
+  }
+
+  .list {
+    padding: 2vh 0 2vh 2vw;
+  }
+}

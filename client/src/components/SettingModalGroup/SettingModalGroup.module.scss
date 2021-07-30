@@ -1,0 +1,52 @@
+@import "../../mixin.scss";
+
+.root {
+  margin-bottom: 2.5vw;
+  .title {
+    margin-bottom: 1vw;
+    color: $secondaryDark;
+    font-size: 3vw;
+  }
+
+  .content {
+    padding-left: 1vw;
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+
+      // .item {
+      //   margin: 0 1.7vw 1vw 0;
+      //   padding: 0.7% 1.2%;
+      //   position: relative;
+      //   border: 1px solid $primaryDark;
+
+      //   &.deleteSelected {
+      //     border: 1px solid #c74d2d;
+      //   }
+
+      //   .deleteIcon {
+      //     position: absolute;
+      //     top: -26%;
+      //     right: -10%;
+      //     font-size: 100%;
+      //     color: #fff;
+      //     background-color: #c74d2d;
+      //     border: 1px solid #c74d2d;
+      //     border-radius: 50%;
+      //     // background-color: #fff;
+      //   }
+      // }
+    }
+
+    .add {
+      display: flex;
+      align-items: center;
+
+      .field {
+        width: 20%;
+      }
+      .text {
+      }
+    }
+  }
+}
