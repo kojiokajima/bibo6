@@ -35,7 +35,8 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
     } else {
       console.log("HI USER");
       console.log(newCompanies);
-      const res = await axios.post("http://localhost:8080/update-company", { email: user.email, companies: newCompanies });
+      // const res = await axios.post("http://localhost:8080/update-company", { email: user.email, companies: newCompanies });
+      const res = await axios.post("/update-company", { email: user.email, companies: newCompanies });
       console.log(res);
     }
 

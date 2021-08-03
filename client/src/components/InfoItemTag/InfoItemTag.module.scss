@@ -2,15 +2,17 @@
 
 .root {
   display: flex;
+  flex-wrap: wrap;
   font-size: 1.4vw;
 
   .tagItem {
     padding: 0.5% 1%;
     border: 1px solid $primaryMedium;
+    margin: 0 2vw 1vw 0;
 
-    & + .tagItem {
-      margin-left: 2vw;
-    }
+    // & + .tagItem {
+    //   margin-left: 2vw;
+    // }
 
     .tagLink {
     }

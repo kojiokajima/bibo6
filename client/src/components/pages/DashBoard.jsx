@@ -37,7 +37,8 @@ const DashBoard = () => {
           photoUrl: user.photoURL,
         };
 
-        axios.post("http://localhost:8080/user", userObj).then((res) => {
+        // axios.post("http://localhost:8080/user", userObj).then((res) => {
+        axios.post("/user", userObj).then((res) => {
           setUserInfo(res.data);
           setIsLoading(false);
         });

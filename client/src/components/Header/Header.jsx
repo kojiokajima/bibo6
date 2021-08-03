@@ -39,7 +39,7 @@ const Header = ({ user, setUser }) => {
     <div className={classes.root}>
       <div className={classes.left}></div>
       <div className={classes.middle}></div>
-      <div className={classes.right} onClick={!isGuest ? togglePopper : undefined}>
+      <div className={`${classes.right} ${!isGuest ? classes.user : ""}`} onClick={!isGuest ? togglePopper : undefined}>
         Hello {isGuest ? "Guest" : user.firstName}
         {!isGuest && <Settings className={classes.settinIcon} ref={anchorRef} />}
       </div>

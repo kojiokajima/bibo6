@@ -6,6 +6,7 @@
   line-height: 30px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  cursor: pointer;
 
   & + .root {
     margin-top: 10px;

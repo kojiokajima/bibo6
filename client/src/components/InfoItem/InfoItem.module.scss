@@ -2,7 +2,8 @@
 
 .root {
   display: flex;
-  align-items: center;
+  // align-items: center;
+  align-items: flex-start;
 
   .label {
     width: 25%;

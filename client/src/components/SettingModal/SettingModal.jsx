@@ -17,7 +17,8 @@ const SettingModal = ({ isOpen, setIsOpen, user, setUser }) => {
     const payloadSkills = skills.filter((skill) => skill !== "");
     const payloadPlatforms = platforms.filter((platform) => platform !== "");
     console.log("payload: ", { email: user.email, skills: payloadSkills, platforms: payloadPlatforms });
-    axios.post("http://localhost:8080/update-list", { email: user.email, skills: payloadSkills, platforms: payloadPlatforms });
+    // axios.post("http://localhost:8080/update-list", { email: user.email, skills: payloadSkills, platforms: payloadPlatforms });
+    await axios.post("/update-list", { email: user.email, skills: payloadSkills, platforms: payloadPlatforms });
     setUser({ ...user, skills: payloadSkills, platforms: payloadPlatforms });
     // setUser({
     //   email: data.email,
