@@ -3,14 +3,14 @@
 .root {
   display: flex;
   align-items: center;
-  font-size: 4vw;
+  font-size: 3vw;
 
   .name {
     color: $primaryDark;
   }
 
   .option {
-    font-size: 2vw;
+    font-size: 1.2vw;
     margin-left: 2vw;
     padding: 0.5% 2%;
     cursor: pointer;

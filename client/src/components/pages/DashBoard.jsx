@@ -55,8 +55,8 @@ const DashBoard = () => {
         <SideBar companies={userInfo.companies} setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} />
         <Info setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} user={userInfo} setUser={setUserInfo} />
         {isGuest && <GoBack />}
-        <h1 onClick={() => signOut()}>SIGN OUT</h1>
-        <h1 onClick={() => setIsOpen(true)}>Let's MODAL</h1>
+        {/* <h1 onClick={() => signOut()}>SIGN OUT</h1> */}
+        {/* <h1 onClick={() => setIsOpen(true)}>Let's MODAL</h1> */}
       </div>
       <Modal isBlank={isModalBlank} isOpen={isOpen} setIsOpen={setIsOpen} user={userInfo} setUser={setUserInfo} />
     </div>

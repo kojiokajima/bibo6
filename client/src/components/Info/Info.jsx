@@ -23,7 +23,7 @@ const Info = ({ setIsOpen, setIsModalBlank, user, setUser }) => {
       </InfoItems>
     </div>
   ) : (
-    <InfoInitial />
+    <InfoInitial setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} />
   );
 };
 

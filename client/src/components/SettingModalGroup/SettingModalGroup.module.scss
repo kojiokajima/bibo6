@@ -1,7 +1,7 @@
 @import "../../mixin.scss";
 
 .root {
-  margin-bottom: 2.5vw;
+  margin-bottom: 3.5vw;
   .title {
     margin-bottom: 1vw;
     color: $secondaryDark;
@@ -46,6 +46,10 @@
         width: 20%;
       }
       .text {
+        margin-left: 1vw;
+        padding: 0.5% 1%;
+        border: 1px solid $secondaryMedium;
+        cursor: pointer;
       }
     }
   }

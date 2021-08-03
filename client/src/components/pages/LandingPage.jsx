@@ -59,7 +59,7 @@ const LandingPage = () => {
           <div className={classes.playAround}>Play Around</div>
         </Link>
       </div>
-      <h1 onClick={() => auth.signOut()}>SIGN OUT</h1>
+      {/* <h1 onClick={() => auth.signOut()}>SIGN OUT</h1> */}
     </div>
   );
 };

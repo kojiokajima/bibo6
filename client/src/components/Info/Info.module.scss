@@ -1,8 +1,9 @@
 @import "../../mixin.scss";
 
 .root {
+  position: relative;
   width: 100%;
-  margin: 3vh 4vw;
+  margin: 4vh 5vw;
   .title {
   }
 }

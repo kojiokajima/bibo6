@@ -41,11 +41,7 @@ const Header = ({ user, setUser }) => {
       <div className={classes.middle}></div>
       <div className={classes.right} onClick={!isGuest ? togglePopper : undefined}>
         Hello {isGuest ? "Guest" : user.firstName}
-        {!isGuest && (
-          <span ref={anchorRef}>
-            <Settings />
-          </span>
-        )}
+        {!isGuest && <Settings className={classes.settinIcon} ref={anchorRef} />}
       </div>
       <Popper open={isPopperOpen} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
         {({ TransitionProps, placement }) => (
