@@ -1,4 +1,15 @@
 @import "../../mixin.scss";
 
 .root {
+  .buttonArea {
+    .deleteButton {
+      color: #c74d4d;
+      border: 1px solid #c74d4d;
+    }
+
+    .cancelButton {
+      color: $secondaryMedium;
+      border: 1px solid $secondaryMedium;
+    }
+  }
 }

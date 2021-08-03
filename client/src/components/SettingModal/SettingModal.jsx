@@ -10,9 +10,6 @@ const SettingModal = ({ isOpen, setIsOpen, user, setUser }) => {
   const [compSkills, setCompSkills] = useState(user.skills);
   const [compPlatforms, setCompPlatforms] = useState(user.platforms);
 
-  console.log("compPlatforms: ", compPlatforms);
-  console.log("user.platforms: ", user.platforms);
-
   const handleClick = async () => {
     const payloadSkills = skills.filter((skill) => skill !== "");
     const payloadPlatforms = platforms.filter((platform) => platform !== "");

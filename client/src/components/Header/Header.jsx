@@ -5,6 +5,7 @@ import SettingModal from "../SettingModal/SettingModal";
 import { IsGuestContext } from "../../App";
 import { auth } from "../../firebase/firebase.util";
 import classes from "./Header.module.scss";
+import WhiteLogo from "../../assets/images/whiteLogo.png";
 
 const Header = ({ user, setUser }) => {
   const [isPopperOpen, setIsPopperOpen] = useState(false);
@@ -37,8 +38,9 @@ const Header = ({ user, setUser }) => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.left}></div>
-      <div className={classes.middle}></div>
+      {/* <div className={classes.left}></div> */}
+      <img className={classes.left} src={WhiteLogo} alt="" />
+      {/* <div className={classes.middle}></div> */}
       <div className={`${classes.right} ${!isGuest ? classes.user : ""}`} onClick={!isGuest ? togglePopper : undefined}>
         Hello {isGuest ? "Guest" : user.firstName}
         {!isGuest && <Settings className={classes.settinIcon} ref={anchorRef} />}

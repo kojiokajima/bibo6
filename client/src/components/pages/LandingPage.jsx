@@ -3,6 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { IsGuestContext, CompanyContext, initialCompany } from "../../App";
 import { auth, signInWithGoogle } from "../../firebase/firebase.util";
 import classes from "./LandingPage.module.scss";
+import ColouredLogo from "../../assets/images/colouredLogo.png";
 
 // const Loading = () => {
 //   return <h2>Loading</h2>;
@@ -46,7 +47,10 @@ const LandingPage = () => {
     <h2>Loading</h2>
   ) : (
     <div className={classes.root}>
-      <div className={classes.logo}></div>
+      {/* <div className={classes.logo} /> */}
+      {/* <div className={classes.logoContainer}> */}
+      <img className={classes.logo} src={ColouredLogo} alt="" srcset="" />
+      {/* </div> */}
       <div className={classes.title}>bibo6</div>
       <div className={classes.text}>Way to get closer to your new career</div>
       <div className={classes.buttonArea}>

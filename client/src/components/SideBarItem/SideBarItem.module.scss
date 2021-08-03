@@ -1,6 +1,8 @@
+@import "../../mixin.scss";
+
 .root {
   height: 30px;
-  background-color: beige;
+  background-color: $primaryLight;
   overflow: hidden;
   text-indent: 10px;
   line-height: 30px;

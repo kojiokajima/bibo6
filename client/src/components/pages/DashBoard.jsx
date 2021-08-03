@@ -47,8 +47,6 @@ const DashBoard = () => {
     });
   }, [isGuest, userInfo]);
 
-  console.log("user: ", userInfo);
-
   return (
     <div className={classes.root}>
       <Header user={userInfo} setUser={setUserInfo} />

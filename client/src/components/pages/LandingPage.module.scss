@@ -9,13 +9,12 @@
   align-items: center;
 
   .logo {
-    height: 200px;
-    width: 200px;
-    background-color: $secondaryLight;
+    height: 270px;
+    width: auto;
   }
 
   .title {
-    margin-top: 4vw;
+    // margin-top: 4vw;
     color: $primaryMedium;
     font-size: 6vw;
     letter-spacing: 3px;

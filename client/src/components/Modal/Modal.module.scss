@@ -17,6 +17,14 @@
     }
   }
   .buttonArea {
-    background-color: $primaryLight;
+    .saveButton {
+      color: $primaryLight;
+      border: 1px solid $primaryLight;
+    }
+
+    .cancelButton {
+      color: #c74d4d;
+      border: 1px solid #c74d4d;
+    }
   }
 }

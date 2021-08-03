@@ -71,8 +71,12 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
         </form>
       </DialogContent>
       <DialogActions className={classes.buttonArea}>
-        <Button onClick={handleClick}>{isBlank ? "SAVE" : "UPDATE"}</Button>
-        <Button onClick={() => setIsOpen(false)}>Cancel</Button>
+        <Button className={classes.saveButton} onClick={handleClick}>
+          {isBlank ? "SAVE" : "UPDATE"}
+        </Button>
+        <Button className={classes.cancelButton} onClick={() => setIsOpen(false)}>
+          Cancel
+        </Button>
       </DialogActions>
     </Dialog>
   );

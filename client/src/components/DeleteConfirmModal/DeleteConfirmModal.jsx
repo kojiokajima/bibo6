@@ -22,8 +22,12 @@ const DeleteConfirmModal = ({ isOpen, setIsOpen, name, user, setUser }) => {
     <Dialog className={classes.root} open={isOpen} onClose={() => setIsOpen(false)} maxWidth={false}>
       <DialogContent className={classes.content}>Are you sure you want to delete this record?</DialogContent>
       <DialogActions className={classes.buttonArea}>
-        <Button onClick={deleteRecord}>Delete</Button>
-        <Button onClick={() => setIsOpen(false)}>Cancel</Button>
+        <Button className={classes.deleteButton} onClick={deleteRecord}>
+          Delete
+        </Button>
+        <Button className={classes.cancelButton} onClick={() => setIsOpen(false)}>
+          Cancel
+        </Button>
       </DialogActions>
     </Dialog>
   );
