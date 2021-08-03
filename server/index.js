@@ -2,7 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const path = require("path")
-require('dotenv').config()
+// require('dotenv').config()
+require('dotenv').config({ path: path.resolve(__dirname, './.env') })
 
 const authRouters = require('./routes/auth')
 const listRouters = require('./routes/list')
@@ -35,3 +36,13 @@ mongoose.connect(process.env.MONGODB_URL, {
 
   app.listen(PORT, () => console.log(`server is running on port ${PORT}`))
 })
+// mongoose.connect(process.env.MONGODB_URL, {
+//   useCreateIndex: true,
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }).then(() => {
+//   console.log("Connected to database");
+//   app.listen(PORT, (req, res) => console.log(`server is running on port ${PORT}`))
+// }).catch((err) => {
+//   console.log(err)
+// })
