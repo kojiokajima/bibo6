@@ -36,7 +36,6 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/dashboard" component={DashBoard} />
-          {/* <Route path="/auth/callback" component={Authcallback} /> */}
           <Route component={PageNotFound} />
         </Switch>
       </CompanyContext.Provider>

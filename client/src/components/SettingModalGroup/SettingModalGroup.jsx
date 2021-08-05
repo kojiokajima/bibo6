@@ -1,6 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import { TextField } from "@material-ui/core";
-import { Remove } from "@material-ui/icons";
 import classes from "./SettingModalGroup.module.scss";
 import SettingModalItem from "../SettingModalItem/SettingModalItem";
 

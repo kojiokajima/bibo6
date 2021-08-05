@@ -10,10 +10,7 @@ const DeleteConfirmModal = ({ isOpen, setIsOpen, name, user, setUser }) => {
 
   const deleteRecord = async () => {
     const newCompanies = user.companies.filter((item, i) => item.name !== name);
-    // if (!isGuest) {
-    // await axios.delete("http://localhost:8080/delete", { data: { email: user.email, companies: newCompanies } });
     await axios.delete("/delete", { data: { email: user.email, companies: newCompanies } });
-    // }
     setUser({ ...user, companies: [...newCompanies] });
     setCompany(initialCompany);
     setIsOpen(false);

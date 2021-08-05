@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { MoreHoriz } from "@material-ui/icons";
 import classes from "./InfoTitle.module.scss";
 import DeleteConfirmModal from "../DeleteConfirmModal/DeleteConfirmModal";
 
@@ -19,7 +18,13 @@ const InfoTitle = ({ name, setIsOpen, setIsModalBlank, user, setUser }) => {
       <div className={`${classes.option} ${classes.delete}`} onClick={() => setIsDeleteModalOpen(true)}>
         Delete
       </div>
-      <DeleteConfirmModal isOpen={isDeleteModalOpen} setIsOpen={setIsDeleteModalOpen} name={name} user={user} setUser={setUser} />
+      <DeleteConfirmModal
+        isOpen={isDeleteModalOpen}
+        setIsOpen={setIsDeleteModalOpen}
+        name={name}
+        user={user}
+        setUser={setUser}
+      />
     </div>
   );
 };
