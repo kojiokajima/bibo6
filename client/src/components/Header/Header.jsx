@@ -28,19 +28,9 @@ const Header = ({ user, setUser }) => {
 
   const handleListKeyDown = () => {};
 
-  // const handleClose = (event) => {
-  //   if (anchorRef.current && anchorRef.current.contains(event.target)) {
-  //     return;
-  //   }
-
-  //   setOpen(false);
-  // };
-
   return (
     <div className={classes.root}>
-      {/* <div className={classes.left}></div> */}
       <img className={classes.left} src={WhiteLogo} alt="" />
-      {/* <div className={classes.middle}></div> */}
       <div className={`${classes.right} ${!isGuest ? classes.user : ""}`} onClick={!isGuest ? togglePopper : undefined}>
         Hello {isGuest ? "Guest" : user.firstName}
         {!isGuest && <Settings className={classes.settinIcon} ref={anchorRef} />}
@@ -49,9 +39,7 @@ const Header = ({ user, setUser }) => {
         {({ TransitionProps, placement }) => (
           <Grow {...TransitionProps} style={{ transformOrigin: placement === "bottom" ? "center top" : "center bottom" }}>
             <Paper>
-              {/* <ClickAwayListener onClickAway={handleClose}> */}
               <ClickAwayListener onClickAway={() => setIsPopperOpen(false)}>
-                {/* <MenuList autoFocusItem={isPopperOpen} id="menu-list-grow" onKeyDown={handleListKeyDown}> */}
                 <MenuList onKeyDown={handleListKeyDown}>
                   <MenuItem onClick={handleSetting}>Setting</MenuItem>
                   <MenuItem onClick={handleLogout}>Logout</MenuItem>

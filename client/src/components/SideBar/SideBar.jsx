@@ -3,7 +3,6 @@ import SideBarGroup from "../SideBarGroup/SideBarGroup";
 import classes from "./SideBar.module.scss";
 
 const SideBar = ({ companies, setIsOpen, setIsModalBlank }) => {
-  // const [sideBarCompanies, setSideBarCompanies] = useState(companies);
   const [notApplied, setNotApplied] = useState([]);
   const [applied, setApplied] = useState([]);
   const [inProcess, setInProcess] = useState([]);
@@ -24,11 +23,7 @@ const SideBar = ({ companies, setIsOpen, setIsModalBlank }) => {
     setInProcess(getFilteredItem(companies, "In Process"));
     setFailed(getFilteredItem(companies, "Failed"));
     setSucceeded(getFilteredItem(companies, "Succeeded"));
-    // }, [companies]);
   }, [companies, setIsOpen, companies.length]);
-  // }, [companies.length]);
-  // }, [companies.length, companies]);
-  // }, []);
 
   return (
     <div className={classes.root}>

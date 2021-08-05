@@ -9,9 +9,7 @@ const InfoInitial = ({ setIsOpen, setIsModalBlank }) => {
 
   return (
     <div className={classes.root} onClick={handleClick}>
-      {/* <div className={classes.text} > */}
       Click to add your application info
-      {/* </div> */}
     </div>
   );
 };

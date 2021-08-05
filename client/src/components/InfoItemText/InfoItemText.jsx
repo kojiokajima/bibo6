@@ -8,7 +8,15 @@ const InfoItemText = ({ info }) => {
         <div className={classes.root}>{info}</div>
       ) : (
         <div className={classes.root}>
-          $ {info && (+info.salary).toLocaleString()} {info && info.unit}
+          {info.maxSalary ? (
+            <>
+              $ {info && (+info.minSalary).toLocaleString()} ~ {info && (+info.maxSalary).toLocaleString()} {info && info.unit}
+            </>
+          ) : (
+            <>
+              $ {info && (+info.minSalary).toLocaleString()} {info && info.unit}
+            </>
+          )}
         </div>
       )}
     </>

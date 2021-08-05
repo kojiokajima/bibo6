@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import axios from "axios";
-import { Dialog, DialogContent, DialogActions, Button } from "@material-ui/core";
+import { Dialog, DialogContent, DialogActions, Button, FormControlLabel, Checkbox } from "@material-ui/core";
 import ModalText from "../ModalText/ModalText";
 import ModalSelect from "../ModalSelect/ModalSelect";
 import ModalList from "../ModalList/ModalList";
@@ -10,41 +10,31 @@ import classes from "./Modal.module.scss";
 const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
   const [company, setCompany] = useContext(CompanyContext);
   const [isGuest] = useContext(IsGuestContext);
-  // const [questions, setQuestions] = useState(isBlank ? [""] : [...company.questions]);
-  // const [questions, setQuestions] = useState(isBlank ? [""] : ["YO", "HEY"]);
-  // const [questions, setQuestions] = useState([...company.questions]);
   const [payload, setPayload] = useState({ ...company });
+  const [isRangeChecked, setIsRangeChecked] = useState(false);
   const formRef = useRef();
+  const checkboxRef = useRef();
   const originalName = company.name;
 
   const handleClick = async () => {
     let newCompanies = [];
     if (isBlank) {
       newCompanies = [...user.companies, payload];
-      // setUser({ ...user, companies: [...newCompanies] });
     } else {
       newCompanies = user.companies.map((item, i) => (item.name === originalName ? payload : item));
-      // setUser({ ...user, companies: [...newCompanies] });
     }
     setUser({ ...user, companies: [...newCompanies] });
     setCompany(payload);
 
     if (isGuest) {
-      console.log("Hi GUEST");
-      console.log(newCompanies);
+      console.log("Hi GUEST, why are you seeing console?");
     } else {
-      console.log("HI USER");
-      console.log(newCompanies);
-      // const res = await axios.post("http://localhost:8080/update-company", { email: user.email, companies: newCompanies });
+      console.log("HI USER, why are you seeing console?");
       const res = await axios.post("/update-company", { email: user.email, companies: newCompanies });
-      console.log(res);
     }
 
     setIsOpen(false);
   };
-
-  // console.log("payload: ", payload);
-  // console.log("user: ", user);
 
   useEffect(() => {
     setPayload(company);
@@ -104,18 +94,20 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
           />
           <div className={classes.salary}>
             <ModalText
-              label={"Salary"}
+              label={"Min Salary"}
               payload={payload}
               setPayload={setPayload}
-              defaultVal={company.salary}
+              defaultVal={company.minSalary}
               isBlank={isBlank}
             />
+            <span className={classes.wave}>~</span>
             <ModalText
               label={"Max Salary"}
               payload={payload}
               setPayload={setPayload}
-              defaultVal={company.salary}
+              defaultVal={company.maxSalary}
               isBlank={isBlank}
+              isDisabled={isRangeChecked}
             />
             <ModalSelect
               label={"unit"}
@@ -126,9 +118,21 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
               selectOptions={["/ year", "/ month", "/ hour"]}
               isBlank={isBlank}
             />
+            {isBlank ? (
+              <FormControlLabel
+                className={classes.checkbox}
+                control={
+                  <Checkbox
+                    inputRef={checkboxRef}
+                    size={"small"}
+                    onChange={() => setIsRangeChecked(checkboxRef.current.checked)}
+                  />
+                }
+                label="Has range?"
+              />
+            ) : null}
           </div>
           <ModalList label={"Interview Questions"} payload={payload} setPayload={setPayload} isBlank={isBlank} />
-          {/* <ModalList label={"Interview Questions"} questions={[...company.questions]} setQuestions={setQuestions} isBlank={isBlank} /> */}
           <ModalText
             label={"Memo"}
             payload={payload}

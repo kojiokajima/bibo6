@@ -1,4 +1,7 @@
 @import "../../mixin.scss";
 
 .root {
+  &.salary {
+    width: 22%;
+  }
 }
