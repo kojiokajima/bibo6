@@ -20,7 +20,10 @@ const companySchema = new mongoose.Schema({
   preferedSkills: [{
     type: String,
   }],
-  salary: {
+  minSalary: {
+    type: Number
+  },
+  maxSalary: {
     type: Number
   },
   salaryUnit: {

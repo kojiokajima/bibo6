@@ -6,26 +6,17 @@ import { IsGuestContext } from "../../App";
 import classes from "./DashBoard.module.scss";
 import { auth } from "../../firebase/firebase.util";
 import { guest } from "../../guestData";
+import Loading from "../Loading/Loading";
 
 const DashBoard = () => {
   const [userInfo, setUserInfo] = useState(guest);
-  // const [isGuest, setIsGuest] = useState(true);
   const [isGuest, setIsGuest] = useContext(IsGuestContext);
   const [isLoading, setIsLoading] = useState(true);
-
   const [isModalBlank, setIsModalBlank] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-
   const history = useHistory();
 
-  const signOut = () => {
-    auth.signOut();
-    setIsGuest(false);
-  };
-
   useEffect(() => {
-    // !history.location.state && setIsGuest(false);
-
     auth.onAuthStateChanged((user) => {
       if (user && isGuest) {
         setIsGuest(false);
@@ -37,7 +28,6 @@ const DashBoard = () => {
           photoUrl: user.photoURL,
         };
 
-        // axios.post("http://localhost:8080/user", userObj).then((res) => {
         axios.post("/user", userObj).then((res) => {
           setUserInfo(res.data);
           setIsLoading(false);
@@ -45,17 +35,18 @@ const DashBoard = () => {
       }
       if (!isGuest && !user) history.push("/");
     });
+    setIsLoading(false);
   }, [isGuest, userInfo]);
 
-  return (
+  return isLoading ? (
+    <Loading />
+  ) : (
     <div className={classes.root}>
       <Header user={userInfo} setUser={setUserInfo} />
       <div className={classes.contents}>
         <SideBar companies={userInfo.companies} setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} />
         <Info setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} user={userInfo} setUser={setUserInfo} />
         {isGuest && <GoBack />}
-        {/* <h1 onClick={() => signOut()}>SIGN OUT</h1> */}
-        {/* <h1 onClick={() => setIsOpen(true)}>Let's MODAL</h1> */}
       </div>
       <Modal isBlank={isModalBlank} isOpen={isOpen} setIsOpen={setIsOpen} user={userInfo} setUser={setUserInfo} />
     </div>

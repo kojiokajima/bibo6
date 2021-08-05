@@ -6,7 +6,6 @@ const SettingModalItem = ({ compItems, items, setItems, index }) => {
   const [isDeleteSelected, setIsDeleteSelected] = useState(false);
   const handleDeleteSelect = () => {
     setIsDeleteSelected(true);
-    // setItems(items.filter((el) => el !== compItems[index]));
     setItems(items.map((el) => (el !== compItems[index] ? el : "")));
   };
   const handleDeleteDeselect = () => {
@@ -16,9 +15,12 @@ const SettingModalItem = ({ compItems, items, setItems, index }) => {
 
   return (
     <div className={`${classes.root} ${isDeleteSelected && classes.deleteSelected}`}>
-      {/* {items[index]} */}
       {compItems[index]}
-      {isDeleteSelected ? <Add className={`${classes.icon} ${classes.add}`} onClick={handleDeleteDeselect} /> : <Remove className={`${classes.icon} ${classes.delete} `} onClick={handleDeleteSelect} />}
+      {isDeleteSelected ? (
+        <Add className={`${classes.icon} ${classes.add}`} onClick={handleDeleteDeselect} />
+      ) : (
+        <Remove className={`${classes.icon} ${classes.delete} `} onClick={handleDeleteSelect} />
+      )}
     </div>
   );
 };

@@ -14,7 +14,8 @@ export const initialCompany = {
   questions: [""],
   requiredSkills: [""],
   preferedSkills: [""],
-  salary: 0,
+  minSalary: 0,
+  maxSalary: 0,
   salaryUnit: "",
   status: "",
   memo: "",
@@ -35,7 +36,6 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route path="/dashboard" component={DashBoard} />
-          {/* <Route path="/auth/callback" component={Authcallback} /> */}
           <Route component={PageNotFound} />
         </Switch>
       </CompanyContext.Provider>

@@ -14,7 +14,8 @@ export const guest = {
       questions: ["What is your favorite language?", "How old are you?"],
       requiredSkills: ["JavaScript", "React", "Redux"],
       preferedSkills: ["Node.js", "GraphQL"],
-      salary: 600000,
+      minSalary: 600000,
+      maxSalary: 800000,
       salaryUnit: "/ year", // "/ year", "/ month", or "/ hour"
       status: "In Process", // "Not Applied", "Applied", "In Process", "Failed" or "Succeeded"
       memo: "One of the best company in the world",
@@ -27,7 +28,8 @@ export const guest = {
       questions: ["What is your favorite burger?", "How old is your laptop?", "HOHO"],
       requiredSkills: ["JavaScript", "Next.js"],
       preferedSkills: ["Node.js"],
-      salary: 4000,
+      minSalary: 4000,
+      maxSalary: null,
       salaryUnit: "/ month", // "/ year", "/ month", or "/ hour"
       status: "Applied", // "Not Applied", "Applied", "In Process", "Failed" or "Succeeded"
       memo: "Required a lot and challenging but looks great",
