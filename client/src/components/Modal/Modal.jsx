@@ -125,7 +125,7 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
                   <Checkbox
                     inputRef={checkboxRef}
                     size={"small"}
-                    onChange={() => setIsRangeChecked(checkboxRef.current.checked)}
+                    onChange={() => setIsRangeChecked(!checkboxRef.current.checked)}
                   />
                 }
                 label="Has range?"
