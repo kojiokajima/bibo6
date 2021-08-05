@@ -8,9 +8,6 @@ const SettingModalGroup = ({ compItems, setCompItems, title, items, setItems, pl
   const inputRef = useRef();
 
   const handleAdd = () => {
-    // console.log("REF: ", inputRef.current.value);
-    // compItems.push(inputRef.current.value);
-    // setItems([...items, inputRef.current.value]);
     setCompItems([...compItems, inputRef.current.value]);
     setItems([...items, inputRef.current.value]);
     inputRef.current.value = "";
@@ -21,9 +18,7 @@ const SettingModalGroup = ({ compItems, setCompItems, title, items, setItems, pl
       <div className={classes.title}>{title}</div>
       <div className={classes.content}>
         <div className={classes.items}>
-          {/* {items.map((item, i) => ( */}
           {compItems.map((item, i) => (
-            // <SettingModalItem items={items} setItems={setItems} item={item} index={i} key={i} />
             <SettingModalItem compItems={compItems} items={items} setItems={setItems} index={i} key={i} />
           ))}
         </div>

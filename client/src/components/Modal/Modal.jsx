@@ -20,31 +20,21 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
     let newCompanies = [];
     if (isBlank) {
       newCompanies = [...user.companies, payload];
-      // setUser({ ...user, companies: [...newCompanies] });
     } else {
       newCompanies = user.companies.map((item, i) => (item.name === originalName ? payload : item));
-      // setUser({ ...user, companies: [...newCompanies] });
     }
     setUser({ ...user, companies: [...newCompanies] });
     setCompany(payload);
 
     if (isGuest) {
-      console.log("Hi GUEST");
-      console.log(newCompanies);
+      console.log("Hi GUEST, why are you seeing console?");
     } else {
-      console.log("HI USER");
-      console.log(newCompanies);
-      // const res = await axios.post("http://localhost:8080/update-company", { email: user.email, companies: newCompanies });
+      console.log("HI USER, why are you seeing console?");
       const res = await axios.post("/update-company", { email: user.email, companies: newCompanies });
-      console.log(res);
     }
 
     setIsOpen(false);
   };
-
-  console.log("REF: ", checkboxRef.current);
-  // console.log("payload: ", payload);
-  // console.log("user: ", user);
 
   useEffect(() => {
     setPayload(company);

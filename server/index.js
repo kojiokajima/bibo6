@@ -36,13 +36,3 @@ mongoose.connect(process.env.MONGODB_URL, {
 
   app.listen(PORT, () => console.log(`server is running on port ${PORT}`))
 })
-// mongoose.connect(process.env.MONGODB_URL, {
-//   useCreateIndex: true,
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// }).then(() => {
-//   console.log("Connected to database");
-//   app.listen(PORT, (req, res) => console.log(`server is running on port ${PORT}`))
-// }).catch((err) => {
-//   console.log(err)
-// })

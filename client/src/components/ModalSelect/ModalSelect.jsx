@@ -29,27 +29,25 @@ const ModalSelect = ({ label, payload, setPayload, isMultiSelect = true, default
     }
   };
 
-  // console.log("selectedItems", selectedItems);
-  // console.log("selectOptions: ", selectOptions);
-
   return (
     <FormControl className={`${classes.root} ${!isMultiSelect && classes.monoSelect}`}>
-      {/* <InputLabel id="demo-mutiple-checkbox-label" className={classes.label}> */}
       <InputLabel className={classes.label}>{label}</InputLabel>
       {isMultiSelect ? (
-        // <Select labelId="demo-mutiple-checkbox-label" id="demo-mutiple-checkbox" multiple value={selectedItems} onChange={handleChange} input={<Input />} renderValue={(selected) => selected.join(", ")}>
-        <Select multiple value={selectedItems} onChange={handleChange} input={<Input />} renderValue={(selected) => selected.join(", ")}>
-          {/* {names.map((name) => ( */}
+        <Select
+          multiple
+          value={selectedItems}
+          onChange={handleChange}
+          input={<Input />}
+          renderValue={(selected) => selected.join(", ")}
+        >
           {selectOptions.map((name) => (
             <MenuItem key={name} value={name}>
               <Checkbox checked={selectedItems.indexOf(name) > -1} />
-              {/* <Checkbox checked={false} /> */}
               <ListItemText primary={name} />
             </MenuItem>
           ))}
         </Select>
       ) : (
-        // <Select labelId="demo-mutiple-checkbox-label" id="demo-mutiple-checkbox" value={selectedItems} onChange={handleChange} input={<Input />} renderValue={(selected) => selected}>
         <Select value={selectedItems} onChange={handleChange} input={<Input />} renderValue={(selected) => selected}>
           {selectOptions.map((name) => (
             <MenuItem key={name} value={name}>

@@ -6,6 +6,7 @@ import { IsGuestContext } from "../../App";
 import classes from "./DashBoard.module.scss";
 import { auth } from "../../firebase/firebase.util";
 import { guest } from "../../guestData";
+import Loading from "../Loading/Loading";
 
 const DashBoard = () => {
   const [userInfo, setUserInfo] = useState(guest);
@@ -47,7 +48,9 @@ const DashBoard = () => {
     });
   }, [isGuest, userInfo]);
 
-  return (
+  return isLoading ? (
+    <Loading />
+  ) : (
     <div className={classes.root}>
       <Header user={userInfo} setUser={setUserInfo} />
       <div className={classes.contents}>

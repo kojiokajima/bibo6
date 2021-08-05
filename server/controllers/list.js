@@ -11,7 +11,6 @@ exports.updateCompanyList = (req, res, next) => {
   }).catch((err) => {
     console.log(err)
   })
-  res.send("HI")
 }
 
 exports.deleteCompany = (req, res, next) => {
