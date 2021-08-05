@@ -17,7 +17,11 @@ const Info = ({ setIsOpen, setIsModalBlank, user, setUser }) => {
         <InfoItem type={"text"} label={"Position"} info={company.position} />
         <InfoItem type={"tag"} label={"Required Skills"} info={company.requiredSkills} />
         <InfoItem type={"tag"} label={"Prefered Skills"} info={company.preferedSkills} />
-        <InfoItem type={"text"} label={"Salary"} info={{ salary: company.salary, unit: company.salaryUnit }} />
+        <InfoItem
+          type={"text"}
+          label={"Salary"}
+          info={{ minSalary: company.minSalary, maxSalary: company.maxSalary, unit: company.salaryUnit }}
+        />
         <InfoItem type={"list"} label={"Questions"} info={company.questions} />
         <InfoItem type={"text"} label={"Memo"} info={company.memo} />
       </InfoItems>

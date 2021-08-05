@@ -32,7 +32,8 @@ export const items1 = [
     questions: ["What is you name?", "How old are you?"],
     requiredSkills: ["JavaScript", "React", "Next"],
     preferedSkills: ["JavaScript", "React", "Next"],
-    salary: 600000,
+    minSalary: 600000,
+    maxSalary: 900000,
     salaryUnit: "/ year", // "/ year", "/ month", or "/ hour"
     status: "In Process", // "Not Applied", "Applied", "In Process", "Failed" or "Succeeded"
     memo: "Maybe good company Maybe good company Maybe good company Maybe good companyMaybe good company",
@@ -45,7 +46,8 @@ export const items1 = [
     questions: ["What is your parents' name?", "How old are your parents?"],
     requiredSkills: ["JavaScript", "React", "Redux", "MongoDB"],
     preferedSkills: ["JavaScript", "React", "Redux", "MongoDB"],
-    salary: 650000,
+    minSalary: 650000,
+    maxSalary: null,
     salaryUnit: "/ year", // "/ year", "/ month", or "/ hour"
     status: "Applied", // "Not Applied", "Applied", "In Process", "Failed" or "Succeeded"
     memo: "Maybe good company",
@@ -58,7 +60,8 @@ export const items1 = [
     questions: ["What is your grand parents' name?", "How old are your grand parents?"],
     requiredSkills: ["JavaScript", "React", "PostgreSQL"],
     preferedSkills: ["JavaScript", "React", "PostgreSQL"],
-    salary: 750000,
+    minSalary: 750000,
+    maxSalary: 1000000,
     salaryUnit: "/ year", // "/ year", "/ month", or "/ hour"
     status: "Not Applied", // "Not Applied", "Applied", "In Process", "Failed" or "Succeeded"
     memo: "Maybe good company",
@@ -71,7 +74,8 @@ export const items1 = [
     questions: ["What is your grand parents' name?", "How old are your grand parents?"],
     requiredSkills: ["JavaScript", "React", "PostgreSQL"],
     preferedSkills: ["JavaScript", "React", "PostgreSQL"],
-    salary: 850000,
+    minSalary: 850000,
+    maxSalary: null,
     salaryUnit: "/ year", // "/ year", "/ month", or "/ hour"
     status: "Failed", // "Not Applied", "Applied", "In Process", "Failed" or "Succeeded"
     memo: "Maybe good company",
@@ -84,7 +88,7 @@ export const items1 = [
     questions: ["What is your grand parents' name?", "How old are your grand parents?"],
     requiredSkills: ["JavaScript", "React", "PostgreSQL"],
     preferedSkills: ["JavaScript", "React", "PostgreSQL"],
-    salary: 950000,
+    minSalary: 950000,
     salaryUnit: "/ year", // "/ year", "/ month", or "/ hour"
     status: "Succeeded", // "Not Applied", "Applied", "In Process", "Failed" or "Succeeded"
     memo: "Maybe good company",

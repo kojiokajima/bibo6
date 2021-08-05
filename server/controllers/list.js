@@ -30,14 +30,11 @@ exports.deleteCompany = (req, res, next) => {
 
 exports.updateList = (req, res, next) => {
   const { email, skills, platforms } = req.body
-  let updatedUser = {}
 
   User.findOne({ email: email }).then((user) => {
     user.skills = skills
     user.platforms = platforms
     return user.save()
-    // console.log('user: ', user)
-    // res.status(200).send(user)
   }).then(() => {
     res.end()
   }).catch((err) => {
