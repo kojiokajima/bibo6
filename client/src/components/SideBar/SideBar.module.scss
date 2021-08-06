@@ -1,9 +1,16 @@
+@import "../../mixin.scss";
+
 .root {
-  // height: 100vh;
+  height: calc(100vh - 60px);
   width: 200px;
-  // display: flex;
-  // flex-direction: column;
+  position: sticky;
+  top: 60px;
   background-color: #f4f4f4;
+
+  @include sm {
+    height: 100vh;
+    top: 0;
+  }
 
   .addCompany {
     margin: 2vw 0;

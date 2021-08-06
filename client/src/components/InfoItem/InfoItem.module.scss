@@ -5,20 +5,37 @@
   // align-items: center;
   align-items: flex-start;
 
+  @include sm {
+    flex-direction: column;
+  }
+
   .label {
     font-size: 1.6vw;
     width: 25%;
     color: $secondaryMedium;
+
+    @include sm {
+      width: 100%;
+      font-size: 5vw;
+    }
   }
 
   .content {
     width: 80%;
-    font-size: 1.8vw;
+    // font-size: 1.8vw;
     color: $secondaryDark;
+
+    @include sm {
+      margin-left: 2vw;
+    }
   }
 
   & + .root {
     margin-top: 5vh;
+
+    @include sm {
+      margin-top: 3.5vh;
+    }
   }
 }
 

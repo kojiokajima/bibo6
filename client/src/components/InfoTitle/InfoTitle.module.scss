@@ -9,6 +9,10 @@
     width: 65%;
     color: $primaryDark;
     overflow-wrap: break-word;
+
+    @include sm {
+      font-size: 8vw;
+    }
   }
 
   .option {
@@ -20,10 +24,13 @@
       color: $secondaryMedium;
       border: 1px solid $secondaryMedium;
     }
-
     &.delete {
       color: #c74d4d;
       border: 1px solid #c74d4d;
+    }
+
+    @include sm {
+      font-size: 4vw;
     }
   }
 

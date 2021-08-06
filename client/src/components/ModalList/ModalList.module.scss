@@ -12,16 +12,22 @@
       }
 
       .field {
-        width: 80%;
+        width: 95%;
         display: flex;
         flex-direction: column;
       }
 
       .deleteButton {
+        color: #c74d4d;
       }
     }
   }
 
   .addButton {
+    display: inline-block;
+  }
+
+  @include sm {
+    width: 80%;
   }
 }

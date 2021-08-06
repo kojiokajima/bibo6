@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import axios from "axios";
-import { Dialog, DialogContent, DialogActions, Button, FormControlLabel, Checkbox } from "@material-ui/core";
+import {
+  Dialog,
+  DialogContent,
+  DialogActions,
+  Button,
+  FormControlLabel,
+  Checkbox,
+  InputLabel,
+  Hidden,
+} from "@material-ui/core";
 import ModalText from "../ModalText/ModalText";
 import ModalSelect from "../ModalSelect/ModalSelect";
 import ModalList from "../ModalList/ModalList";
@@ -93,6 +102,9 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
             isBlank={isBlank}
           />
           <div className={classes.salary}>
+            <Hidden smUp>
+              <InputLabel className={classes.label}>Salary</InputLabel>
+            </Hidden>
             <ModalText
               label={"Min Salary"}
               payload={payload}
@@ -100,7 +112,9 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
               defaultVal={company.minSalary}
               isBlank={isBlank}
             />
-            <span className={classes.wave}>~</span>
+            <Hidden xsDown>
+              <span className={classes.wave}>~</span>
+            </Hidden>
             <ModalText
               label={"Max Salary"}
               payload={payload}

@@ -4,6 +4,10 @@
   position: relative;
   width: 100%;
   margin: 4vh 5vw;
+
+  @include sm {
+    margin: 6vh 2vw 0 0;
+  }
   .title {
   }
 }

@@ -6,4 +6,10 @@
   left: 50%;
   transform: translate(-10%, -50%);
   cursor: pointer;
+
+  @include sm {
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
 }

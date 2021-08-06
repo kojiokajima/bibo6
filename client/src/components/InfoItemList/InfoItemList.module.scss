@@ -2,7 +2,10 @@
 
 .root {
   font-size: 1.4vw;
-  // border: 1px solid $primaryDark;
+
+  @include sm {
+    font-size: 4vw;
+  }
 
   .item {
     & + .item {

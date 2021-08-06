@@ -38,8 +38,12 @@ const SettingModal = ({ isOpen, setIsOpen, user, setUser }) => {
         />
       </DialogContent>
       <DialogActions className={classes.buttonArea}>
-        <Button onClick={handleClick}>SAVE</Button>
-        <Button onClick={() => setIsOpen(false)}>Cancel</Button>
+        <Button className={classes.saveButton} onClick={handleClick}>
+          SAVE
+        </Button>
+        <Button className={classes.cancelButton} onClick={() => setIsOpen(false)}>
+          Cancel
+        </Button>
       </DialogActions>
     </Dialog>
   );

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { TextField } from "@material-ui/core";
+import { RemoveCircle } from "@material-ui/icons";
 import classes from "./ModalList.module.scss";
 import { CompanyContext } from "../../App";
 
@@ -51,9 +52,10 @@ const ModalList = ({ label, payload, setPayload, isBlank }) => {
             ) : (
               <TextField className={classes.field} id="standard-basic" onChange={(e) => handleChange(e, i)} value={item} />
             )}
-            <span className={classes.deleteButton} onClick={() => deleteField(i)}>
-              DELETE
-            </span>
+            {/* <span className={classes.deleteButton} onClick={() => deleteField(i)}> */}
+            {/* DELETE */}
+            <RemoveCircle className={classes.deleteButton} onClick={() => deleteField(i)} />
+            {/* </span> */}
           </div>
         ))}
       </div>

@@ -4,5 +4,21 @@
   .content {
     height: 60vh;
     width: 70vw;
+
+    @include sm {
+      height: 80vh;
+      width: 90vw;
+    }
+  }
+
+  .buttonArea {
+    .saveButton {
+      color: $primaryLight;
+      border: 1px solid $primaryLight;
+    }
+    .cancelButton {
+      color: #c74d4d;
+      border: 1px solid #c74d4d;
+    }
   }
 }

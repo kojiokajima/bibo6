@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SideBarGroup from "../SideBarGroup/SideBarGroup";
 import classes from "./SideBar.module.scss";
 
-const SideBar = ({ companies, setIsOpen, setIsModalBlank }) => {
+const SideBar = ({ companies, setIsOpen, setIsModalBlank, setIsDrawerOpen }) => {
   const [notApplied, setNotApplied] = useState([]);
   const [applied, setApplied] = useState([]);
   const [inProcess, setInProcess] = useState([]);
@@ -31,11 +31,11 @@ const SideBar = ({ companies, setIsOpen, setIsModalBlank }) => {
         + Add
       </div>
       <ul className={classes.list}>
-        <SideBarGroup status={"Not Applied"} items={notApplied} />
-        <SideBarGroup status={"Applied"} items={applied} />
-        <SideBarGroup status={"In Process"} items={inProcess} />
-        <SideBarGroup status={"Failed"} items={failed} />
-        <SideBarGroup status={"Succeeded"} items={succeeded} />
+        <SideBarGroup status={"Not Applied"} items={notApplied} setIsDrawerOpen={setIsDrawerOpen} />
+        <SideBarGroup status={"Applied"} items={applied} setIsDrawerOpen={setIsDrawerOpen} />
+        <SideBarGroup status={"In Process"} items={inProcess} setIsDrawerOpen={setIsDrawerOpen} />
+        <SideBarGroup status={"Failed"} items={failed} setIsDrawerOpen={setIsDrawerOpen} />
+        <SideBarGroup status={"Succeeded"} items={succeeded} setIsDrawerOpen={setIsDrawerOpen} />
       </ul>
     </div>
   );

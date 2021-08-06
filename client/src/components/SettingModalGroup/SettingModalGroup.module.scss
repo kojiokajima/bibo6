@@ -2,10 +2,19 @@
 
 .root {
   margin-bottom: 3.5vw;
+
+  @include sm {
+    width: 79%;
+    margin-bottom: 9vw;
+  }
+
   .title {
     margin-bottom: 1vw;
     color: $secondaryDark;
     font-size: 3vw;
+    @include sm {
+      font-size: 6vw;
+    }
   }
 
   .content {
@@ -44,12 +53,18 @@
 
       .field {
         width: 20%;
+        @include sm {
+          width: 60%;
+        }
       }
       .text {
         margin-left: 1vw;
         padding: 0.5% 1%;
         border: 1px solid $secondaryMedium;
         cursor: pointer;
+        @include sm {
+          margin-left: 2.5vw;
+        }
       }
     }
   }

@@ -19,6 +19,9 @@
       border-bottom: 2px solid #c74d2d;
     }
   }
+  @include sm {
+    margin: 0 2vw 4vw 0;
+  }
 
   .icon {
     position: absolute;

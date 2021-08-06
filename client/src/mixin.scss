@@ -13,13 +13,13 @@ $tabMaxWidth: 960px;
 // $pcMinWidth: 1920px;
 
 @mixin sm($max: $spMaxWidth) {
-  @media only screen and (max-width: #{$min}) {
+  @media only screen and (max-width: #{$max}) {
     @content;
   }
 }
 
-@mixin md($min: $tabMaxWidth) {
-  @media only screen and (max-width: #{$min}) {
+@mixin md($max: $tabMaxWidth) {
+  @media only screen and (max-width: #{$max}) {
     @content;
   }
 }

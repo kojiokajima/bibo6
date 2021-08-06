@@ -2,4 +2,8 @@
 
 .root {
   margin: 4vh 3vw;
+
+  @include sm {
+    margin: 2vh 3vw;
+  }
 }

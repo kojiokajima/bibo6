@@ -7,6 +7,8 @@ import classes from "./DashBoard.module.scss";
 import { auth } from "../../firebase/firebase.util";
 import { guest } from "../../guestData";
 import Loading from "../Loading/Loading";
+import { Hidden } from "@material-ui/core";
+import SideBarDrawer from "../SideBarDrawer/SideBarDrawer";
 
 const DashBoard = () => {
   const [userInfo, setUserInfo] = useState(guest);
@@ -44,7 +46,12 @@ const DashBoard = () => {
     <div className={classes.root}>
       <Header user={userInfo} setUser={setUserInfo} />
       <div className={classes.contents}>
-        <SideBar companies={userInfo.companies} setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} />
+        <Hidden xsDown>
+          <SideBar companies={userInfo.companies} setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} />
+        </Hidden>
+        <Hidden smUp>
+          <SideBarDrawer userInfo={userInfo} setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} />
+        </Hidden>
         <Info setIsOpen={setIsOpen} setIsModalBlank={setIsModalBlank} user={userInfo} setUser={setUserInfo} />
         {isGuest && <GoBack />}
       </div>

@@ -8,9 +8,17 @@
   flex-direction: column;
   align-items: center;
 
+  @include sm {
+    height: unset;
+  }
+
   .logo {
     height: 270px;
     width: auto;
+
+    @include sm {
+      height: 200px;
+    }
   }
 
   .title {
@@ -18,12 +26,20 @@
     color: $primaryMedium;
     font-size: 6vw;
     letter-spacing: 3px;
+
+    @include sm {
+      font-size: 9vw;
+    }
   }
 
   .text {
     margin-top: 1vw;
     color: $primaryLight;
     font-size: 3vw;
+
+    @include sm {
+      font-size: 5vw;
+    }
   }
 
   .buttonArea {
