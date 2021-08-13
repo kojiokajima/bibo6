@@ -8,8 +8,8 @@ import ColouredLogo from "../../assets/images/colouredLogo.png";
 
 const LandingPage = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isGuest, setIsGuest] = useContext(IsGuestContext);
-  const [company, setCompany] = useContext(CompanyContext);
+  const [, setIsGuest] = useContext(IsGuestContext);
+  const [, setCompany] = useContext(CompanyContext);
   const history = useHistory();
 
   const signIn = () => {

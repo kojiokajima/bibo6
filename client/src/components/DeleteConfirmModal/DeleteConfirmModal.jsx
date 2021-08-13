@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
 import axios from "axios";
 import { Dialog, DialogContent, DialogActions, Button } from "@material-ui/core";
-import { IsGuestContext, CompanyContext, initialCompany } from "../../App";
+import { CompanyContext, initialCompany } from "../../App";
 import classes from "./DeleteConfirmModal.module.scss";
 
 const DeleteConfirmModal = ({ isOpen, setIsOpen, name, user, setUser }) => {
-  const [isGuest] = useContext(IsGuestContext);
-  const [company, setCompany] = useContext(CompanyContext);
+  const [, setCompany] = useContext(CompanyContext);
 
   const deleteRecord = async () => {
     const newCompanies = user.companies.filter((item, i) => item.name !== name);

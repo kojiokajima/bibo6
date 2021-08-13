@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Dialog, DialogContent, DialogActions, Button } from "@material-ui/core";
 import classes from "./SettingModal.module.scss";
@@ -20,22 +20,8 @@ const SettingModal = ({ isOpen, setIsOpen, user, setUser }) => {
   return (
     <Dialog className={classes.root} open={isOpen} onClose={() => setIsOpen(false)} maxWidth={false}>
       <DialogContent className={classes.content}>
-        <SettingModalGroup
-          compItems={compSkills}
-          setCompItems={setCompSkills}
-          title={"Skills"}
-          items={skills}
-          setItems={setSkills}
-          placeholder={"New Skill"}
-        />
-        <SettingModalGroup
-          compItems={compPlatforms}
-          setCompItems={setCompPlatforms}
-          title={"Platforms"}
-          items={platforms}
-          setItems={setPlatforms}
-          placeholder={"New Platform"}
-        />
+        <SettingModalGroup compItems={compSkills} setCompItems={setCompSkills} title={"Skills"} items={skills} setItems={setSkills} placeholder={"New Skill"} />
+        <SettingModalGroup compItems={compPlatforms} setCompItems={setCompPlatforms} title={"Platforms"} items={platforms} setItems={setPlatforms} placeholder={"New Platform"} />
       </DialogContent>
       <DialogActions className={classes.buttonArea}>
         <Button className={classes.saveButton} onClick={handleClick}>

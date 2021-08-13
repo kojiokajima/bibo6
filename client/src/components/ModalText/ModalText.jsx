@@ -27,24 +27,9 @@ const ModalText = ({ label, payload, setPayload, isMultiLine = false, defaultVal
     }
   };
 
-  return isMultiLine ? (
-    <TextField
-      multiline
-      rows={5}
-      className={classes.root}
-      label={label}
-      defaultValue={isBlank ? "" : defaultVal}
-      onChange={(e) => handleChange(e)}
-    />
-  ) : (
-    <TextField
-      className={`${classes.root} ${(label === "Max Salary" || label === "Min Salary") && classes.salary}`}
-      label={label}
-      defaultValue={isBlank ? "" : defaultVal}
-      onChange={(e) => handleChange(e)}
-      disabled={isDisabled}
-    />
-  );
+  console.log("isDisabled: ", isDisabled);
+
+  return isMultiLine ? <TextField multiline rows={5} className={classes.root} label={label} defaultValue={isBlank ? "" : defaultVal} onChange={(e) => handleChange(e)} /> : <TextField className={`${classes.root} ${(label === "Max Salary" || label === "Min Salary") && classes.salary}`} label={label} defaultValue={isBlank ? "" : defaultVal} onChange={(e) => handleChange(e)} disabled={isDisabled} />;
 };
 
 export default ModalText;

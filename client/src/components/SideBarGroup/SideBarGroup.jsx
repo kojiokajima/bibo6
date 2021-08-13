@@ -1,10 +1,10 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import SideBarItem from "../SideBarItem/SideBarItem";
 import { CompanyContext } from "../../App";
 import classes from "./SideBarGroup.module.scss";
 
 const SideBarGroup = ({ status, items, setIsDrawerOpen }) => {
-  const [company, setCompany] = useContext(CompanyContext);
+  const [, setCompany] = useContext(CompanyContext);
 
   const setCompanyInfo = (company) => {
     setCompany(company);
@@ -12,7 +12,9 @@ const SideBarGroup = ({ status, items, setIsDrawerOpen }) => {
 
   const handleClick = (item) => {
     setCompanyInfo(item);
-    setIsDrawerOpen(false);
+    if (window.innerWidth < 600) {
+      setIsDrawerOpen(false);
+    }
   };
 
   return (
@@ -20,13 +22,7 @@ const SideBarGroup = ({ status, items, setIsDrawerOpen }) => {
       <div className={classes.status}>{status}</div>
       <ul className={classes.items}>
         {items.map((item, i) => (
-          <SideBarItem
-            title={item.name}
-            status={status}
-            key={i}
-            onClick={() => handleClick(item)}
-            setIsDrawerOpen={setIsDrawerOpen}
-          />
+          <SideBarItem title={item.name} status={status} key={i} onClick={() => handleClick(item)} />
         ))}
       </ul>
     </li>

@@ -14,7 +14,7 @@ const InfoItemTag = ({ info }) => {
         const tagName = info.map((item) => item.name);
         return info.map((item, i) => (
           <div className={classes.tagItem} key={i}>
-            <a className={classes.tagLink} href={item.url} target="_blank">
+            <a className={classes.tagLink} href={item.url} rel="noreferrer" target="_blank">
               {tagName[i]}
             </a>
           </div>
