@@ -10,7 +10,7 @@ export const IsGuestContext = createContext(true, () => {});
 export const initialCompany = {
   name: "",
   position: "",
-  platforms: [""],
+  platforms: [{ name: "", url: "" }],
   questions: [""],
   requiredSkills: [""],
   preferedSkills: [""],
