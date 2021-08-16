@@ -22,7 +22,7 @@ const ModalUrl = ({ isBlank }) => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Add URL</Typography>
+          <Typography className={classes.addUrl}>Add URL</Typography>
         </AccordionSummary>
         <AccordionDetails className={classes.details}>
           {company.platforms.map((item, index) => {

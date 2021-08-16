@@ -82,7 +82,7 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
               isBlank={isBlank}
             />
             {/* -------Accordion Comes Here------- */}
-            <ModalUrl isBlank={isBlank} />
+            {/* <ModalUrl isBlank={isBlank} /> */}
             {/* -------/Accordion Comes Here------- */}
           </div>
           <ModalText

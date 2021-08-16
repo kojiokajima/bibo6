@@ -5,6 +5,15 @@
   .accordion {
     box-shadow: none;
     .summary {
+      min-height: unset;
+      background-color: aqua;
+      // & > .MuiAccordionSummary-content.Mui-expanded {
+      & > .Mui-expanded {
+        margin: 0;
+      }
+      .addUrl {
+        margin-bottom: 0;
+      }
     }
 
     .details {
@@ -16,6 +25,7 @@
       .platform {
         width: 100%;
         display: flex;
+        align-items: center;
 
         .name {
           width: 20%;
