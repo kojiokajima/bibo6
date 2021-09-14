@@ -69,7 +69,7 @@ const Modal = ({ isBlank, isOpen, setIsOpen, user, setUser }) => {
             setPayload={setPayload}
             isMultiSelect={false}
             defaultVals={company.status}
-            selectOptions={["Not Applied", "Applied", "In Process", "Failed", "Succeeded"]}
+            selectOptions={["Not Applied", "Applied", "In Process", "Maybe Failed", "Failed", "Succeeded"]}
             isBlank={isBlank}
           />
           <div className={classes.applicationPlatform}>
